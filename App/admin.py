@@ -20,6 +20,8 @@ class projetAdmin(admin.ModelAdmin):
     )
     inlines = (MemberShip,)
     autocomplete_fields=["createur"]
+    list_per_page=2
+    list_filter=('etat','createur')
 
 admin.site.register(etudiant,SearchEtudiant)
 # admin.site.register(project,projetAdmin)
